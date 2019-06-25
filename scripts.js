@@ -1,83 +1,79 @@
 
+const gameForm = document.querySelector('#game-form');
+const labels = document.querySelectorAll(".poder");
 
-const playerInput = document.querySelector("#player-input"); // prueba vs compu
+const ganador = document.querySelector('.ganador');
+const player1Pick = document.querySelector('.player1-pick');
+const player2Pick = document.querySelector('.player2-pick');
+const player1Img = document.querySelector('.player1-img');
+const player2Img = document.querySelector('.player2-img');
 
+//SECTIONS
+const resultSection = document.querySelector('.anuncio-ganador');
+const eleccionPoderes = document.querySelector('.eleccion-poderes');
 
-const player1Input = document.querySelector("#player1-input");
-const player2Input = document.querySelector("#player2-input");
+//LO QUE QUITO DE PANTALLA PARA DAR AL ganador
 
-
-const ganador = document.querySelector(".ganador");
-
-/*function iniciarJuego() {
-  const options = ["piedra", "papel", "tijeras"];
-  let computerSelection = Math.floor(Math.random() * 2.99);  // Sacamos un 0,1 o 2.
-
-  computerSelection = options[computerSelection];
-
-  const playerSelection = playerInput.value; // piedra, papel o tijeras   vs compu
-
-*/
-//JUEGO DE DOS JUGADORES
-
+const header = document.querySelector("header");
+const titulo = document.querySelector(".titulo");
 
 function juego() {
-  const options = ["piedra", "papel", "tijeras"];
-  const playerSelection1 = player1Input.value;
-  const playerSelection2 = player2Input.value;
+  const computerSelection = computerPick();
+  const playerSelection = gameForm.selection.value;
+  const ganadorInfo = jugar(playerSelection, computerSelection);
+  imprimeGanador(ganadorInfo);
+}
 
-  console.log("jugador1:", playerSelection1);
-  console.log("jugador2:", playerSelection2);
+function computerPick() {
+  const options = ['Hamehameha', 'Kienzan', 'BigBang'];
+  let computerSelection = Math.floor(Math.random() * 2.99);
+  computerSelection = options[computerSelection];
+  return computerSelection;
+}
 
-  if(playerSelection1 === playerSelection2) {
-    ganador.innerText = "¡Empate! Vuelvan a jugar.";
-  } else if (playerSelection1 === "papel" && playerSelection2 === "piedra") {
-    ganador.innerText = "¡El jugador 1 gana!";
-  } else if (playerSelection1 === "tijeras" && playerSelection2 === "papel") {
-    ganador.innerText = "¡El jugador 1 gana!";
-  }  else if (playerSelection1 === "piedra" && playerSelection2 === "tijeras") {
-      ganador.innerText = "¡El jugador 1 gana!";
-  } else if (playerSelection1 === "piedra" && playerSelection2 === "papel") {   //AQUI PIERDES
-    ganador.innerText = "¡El jugador 2 gana!";
-  } else if (playerSelection1 === "papel" && playerSelection2 === "tijeras") {
-    ganador.innerText = "¡El jugador 2 gana!";
-  } else if (playerSelection1 === "tijeras" && playerSelection2 === "piedra") {
-    ganador.innerText = "¡El jugador 2 gana!";
+function jugar (player1, player2) {
+  if(player1 === 'Hamehameha' && player2 === 'BigBang' ||
+     player1 === 'BigBang' && player2 === 'Kienzan' ||
+     player1 === 'Kienzan' && player2 === 'Hamehameha' ){
+    return {
+      ganador: 'Jugador 1',
+      player1Pick: player1,
+      player2Pick: player2
+    }
+  } else if(player1 === 'BigBang' && player2 === 'Hamehameha' ||
+            player1 === 'Kienzan' && player2 === 'BigBang' ||
+            player1 === 'Hamehameha' && player2 === 'Kienzan'){
+      return {
+        ganador: 'Jugador 2',
+        player1Pick: player1,
+        player2Pick: player2
+      }
+  } else {
+    return {
+      ganador: 'Nadie, porque es un empate.',
+      player1Pick: player1,
+      player2Pick: player2
+    }
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-//JUEGO VS COMPUTADORA
-
-  if(playerSelection === computerSelection) {
-    ganador.innerText = "Empate, vuelve a intentar.";
-  } else if (playerSelection === "papel" && computerSelection === "piedra") {
-    ganador.innerText = "Le ganaste a la computadora.";
-  } else if (playerSelection === "tijeras" && computerSelection === "papel") {
-    ganador.innerText = "Le ganaste a la computadora.";
-  }  else if (playerSelection === "piedra" && computerSelection === "tijeras") {
-      ganador.innerText = "Le ganaste a la computadora.";
-  } else if (playerSelection === "piedra" && computerSelection === "papel") {   //AQUI PIERDES
-    ganador.innerText = "Perdiste contra la computadora.";
-  } else if (playerSelection === "papel" && computerSelection === "tijeras") {
-    ganador.innerText = "Perdiste contra la computadora.";
-  } else if (playerSelection === "tijeras" && computerSelection === "piedra") {
-    ganador.innerText = "Perdiste contra la computadora.";
-  }
+function imprimeGanador(ganadorInfo) {
+  //header.style.display = "none";
+  titulo.style.display = "none";
+  eleccionPoderes.style.display = 'none';
+  resultSection.style.display = 'block';
+  ganador.innerText = 'El ganador de las esferas del dragon es: \n' + ganadorInfo.ganador;
+  player1Pick.innerText = ganadorInfo.player1Pick;
+  player2Pick.innerText = ganadorInfo.player2Pick;
+  player1Img.src = 'DragonBall/' + ganadorInfo.player1Pick + '.jpg';
+  player2Img.src = 'DragonBall/' + ganadorInfo.player2Pick + '.jpg';
 }
 
-console.log("jugador:", playerSelection);
-console.log("computadora:", computerSelection);
-*/
+for(let i = 0; i < labels.length; i++) {
+  labels[i].addEventListener("click", function() {
+    for(let k = 0; k < labels.length; k++) {
+      labels[k].classList.remove("active");
+    }
+    labels[i].classList.add("active");
+  });
+}

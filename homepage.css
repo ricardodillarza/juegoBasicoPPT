@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family:dragon;
+  src: url("tipografias/FunSized.ttf");
+}
+
+body {
+  background-image: url("DragonBall/dragonfondo.jpg");
+}
+
+header {
+  text-align: center;
+}
+
+header img {
+  width: 500px;
+  margin-bottom: 50px;
+}
+
+.titulo {
+  text-align: center;
+  font-family: dragon;
+  background-color: #4AC60F;
+  border-radius: 20px;
+  color: yellow;
+  width: 70%;
+  font-size: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.game-mode {
+  display: flex;
+  justify-content: space-around;
+}
+
+.img-modalidad img {
+  width: 200px;
+}

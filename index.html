@@ -1,19 +1,34 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>Juego piedra, papel o tijeras</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <div>
-    <input id="player1-input" type="password" name="jugadorinicial" placeholder="Elección del jugador 1">
-    <input id="player2-input" type="password" name="jugadordos" placeholder="Elección del jugador 2">
-    <button onClick="juego()">¡A jugar!</button>
+  <head>
+    <meta charset="utf-8">
+    <title>Elige la modalidad en la que deseas jugar</title>
+    <link rel="stylesheet" href="homepage.css">
+  </head>
+  <body>
+
+
+<header>
+  <img src = "DragonBall/logo.png" alt="logo">
+</header>
+
+<article class = "titulo">
+  <p>Escoge la modalidad en la que deseas competir</p>
+</article>
+
+<section class = "game-mode">
+
+  <div class = "un-jugador">
+    <img src="DragonBall/unjug.png" alt="Modalidad-un-jugador">
+    <button onClick="vsComputadora.html">Un jugador</button>
   </div>
 
-  <h2 class="ganador"></h2>
+  <div class = "dos-jugadores">
+    <img src="DragonBall/dosjugadores.png" alt="Modalidad-dos-jugadores">
+    <button onClick="">Dos jugadores</button>
+  </div>
+</section>
 
-  <script src="scripts.js"></script>
-</body>
+
+  </body>
 </html>
