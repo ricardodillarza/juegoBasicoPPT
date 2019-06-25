@@ -36,7 +36,7 @@ function jugar (player1, player2) {
      player1 === 'BigBang' && player2 === 'Kienzan' ||
      player1 === 'Kienzan' && player2 === 'Hamehameha' ){
     return {
-      ganador: 'Jugador 1',
+      ganador: 'El Retador',
       player1Pick: player1,
       player2Pick: player2
     }
@@ -44,7 +44,7 @@ function jugar (player1, player2) {
             player1 === 'Kienzan' && player2 === 'BigBang' ||
             player1 === 'Hamehameha' && player2 === 'Kienzan'){
       return {
-        ganador: 'Jugador 2',
+        ganador: 'La Computadora',
         player1Pick: player1,
         player2Pick: player2
       }

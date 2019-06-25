@@ -9,6 +9,7 @@
 }
 
 body {
+  background-color: orange;
   background-image: url("DragonBall/dragonfondo.jpg");
 }
 
@@ -67,14 +68,20 @@ input {
   padding: 15px 30px;
   font-size: 20px;
   border-radius: 7px;
-  cursor: pointer;
-  background-color: #256EFF;
   color: white;
   margin-left: 10px;
+
+  background: rgba(0,0,0,0);
+  color: white;
+  font-weight: bold;
+  border-color: #256EFF;
+  transition: 1s;
 }
 
 .iniciar:hover {
-  border-color: white;
+  cursor: pointer;
+  background: #256EFF;
+  color: white;
 }
 
 .eleccion-poderes {
