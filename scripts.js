@@ -12,7 +12,7 @@ const player2Img = document.querySelector('.player2-img');
 const resultSection = document.querySelector('.anuncio-ganador');
 const eleccionPoderes = document.querySelector('.eleccion-poderes');
 
-//LO QUE QUITO DE PANTALLA PARA DAR AL ganador
+//LO QUE QUITO DE PANTALLA PARA DAR AL GANADOR
 
 const header = document.querySelector("header");
 const titulo = document.querySelector(".titulo");
