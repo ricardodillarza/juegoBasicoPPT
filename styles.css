@@ -112,7 +112,7 @@ input {
   color: white;
   font-weight: bold;
   border-color: lightblue;
-  transition: 1s;
+  transition: 2s;
 }
 
 .iniciar:hover {
@@ -239,7 +239,7 @@ h4 {
   color: white;
   font-weight: bold;
   border-color: lightblue;
-  transition: 1s;
+  transition: 2s;
 }
 
 .ok:hover {
@@ -267,7 +267,7 @@ h4 {
   color: white;
   font-weight: bold;
   border-color: lightblue;
-  transition: 1s;
+  transition: 2s;
 }
 
 .final:hover {

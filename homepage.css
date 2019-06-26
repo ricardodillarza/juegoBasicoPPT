@@ -65,7 +65,7 @@ header img {
   color: white;
   font-weight: bold;
   border-color:
-  transition: 1s;
+  transition: 2s;
 }
 
 .game-mode button:hover {
@@ -115,7 +115,7 @@ header img {
   color: white;
   font-weight: bold;
   border-color: ;
-  transition: 1s;
+  transition: 2s;
 }
 
 .zona-eleccion button:hover {
