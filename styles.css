@@ -108,16 +108,16 @@ input {
   color: white;
   margin-left: 10px;
 
-  background: lightblue;
+  background: #256EFF;
   color: white;
   font-weight: bold;
-  border-color: #256EFF;
+  border-color: lightblue;
   transition: 1s;
 }
 
 .iniciar:hover {
   cursor: pointer;
-  background: #256EFF;
+  background: lightblue;
   color: white;
 }
 
@@ -235,16 +235,16 @@ h4 {
   color: white;
   margin-left: 10px;
 
-  background: lightblue;
+  background: #256EFF;
   color: white;
   font-weight: bold;
-  border-color: #256EFF;
+  border-color: lightblue;
   transition: 1s;
 }
 
 .ok:hover {
   cursor: pointer;
-  background: #256EFF;
+  background: lightblue;
   color: white;
 }
 
@@ -263,16 +263,16 @@ h4 {
   color: white;
   margin-left: 10px;
 
-  background: lightblue;
+  background: #256EFF;
   color: white;
   font-weight: bold;
-  border-color: #256EFF;
+  border-color: lightblue;
   transition: 1s;
 }
 
 .final:hover {
   cursor: pointer;
-  background: #256EFF;
+  background: lightblue;
   color: white;
 }
 
