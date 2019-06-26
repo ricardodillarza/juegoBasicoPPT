@@ -2,40 +2,37 @@
 <html lang="es">
   <head>
     <meta charset="utf-8">
-    <title>Elige a tu personaje favorito</title>
+    <title>Elige la modalidad en la que deseas jugar</title>
     <link rel="stylesheet" href="homepage.css">
   </head>
   <body>
 
-  <header>
-    <a title = "Inicio" href="https://ricardodillarza.github.io/juegoBasicoPPT/"><img src="DragonBall/logo.png" alt="logo"></a>
-  </header>
+<header>
+  <a title = "Inicio" href="https://ricardodillarza.github.io/juegoBasicoPPT/"><img src="DragonBall/logo.png" alt="logo"></a>
+</header>
 
-  <article class = "personajes">
-    <p>Elige a un personaje</p>
-    </article>
+<article class = "titulo">
+  <p>Escoge la modalidad en la que deseas competir</p>
+</article>
 
-  <section class = "zona-eleccion">
-    <div class="personaje1">
-      <img src="DragonBall/Goku.png" alt="Goku">
-      <button onclick= "location.href = 'https://ricardodillarza.github.io/juegoBasicoPPT/numJug.html'">Gokú</button>
-    </div>
+<section class = "game-mode">
 
-    <div class="personaje2">
-      <img src="DragonBall/krilin.png" alt="Krilin">
-      <button onclick= "location.href = 'https://ricardodillarza.github.io/juegoBasicoPPT/numJug.html'">Krillin</button>
-    </div>
+  <div class = "un-jugador">
+    <img src="DragonBall/unjug.png" alt="Modalidad-un-jugador">
+    <button onclick= "location.href = 'file:///Users/richidillarzalugo/javascript/front/ppt-game/personajevscompu.html'">Un jugador</button>
 
-    <div class="personaje3">
-      <img src="DragonBall/vegita.png" alt="Vegeta">
-      <button onclick= "location.href = 'https://ricardodillarza.github.io/juegoBasicoPPT/numJug.html'">Vegeta</button>
-    </div>
+  </div>
 
-    </section>
+  <div class = "dos-jugadores">
+    <img src="DragonBall/dosjugadores.png" alt="Modalidad-dos-jugadores">
+    <button onClick="location.href = 'file:///Users/richidillarzalugo/javascript/front/ppt-game/personajePlayer1.html'">Dos jugadores</button>
+  </div>
+</section>
 
+<audio class="audios" src="audios/dragon-ball.mp3"></audio>
+<audio class="salto" src="audios/jump.mp3"></audio>
+</audio>
 
-
-
-
+<script src="scripts.js"></script>
   </body>
 </html>

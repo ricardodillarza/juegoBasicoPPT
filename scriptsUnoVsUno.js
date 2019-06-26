@@ -1,43 +1,61 @@
-
 const gameForm = document.querySelector('#game-form');
+const gameForm2 = document.querySelector('#game-form2');  //JUG 2
 const labels = document.querySelectorAll(".poder");
+const regresa = document.querySelector('.regresa');
 
+// RESULTADOS
 const ganador = document.querySelector('.ganador');
 const player1Pick = document.querySelector('.player1-pick');
 const player2Pick = document.querySelector('.player2-pick');
 const player1Img = document.querySelector('.player1-img');
 const player2Img = document.querySelector('.player2-img');
-const regresa = document.querySelector('.return');
+
 
 //SECTIONS
-const resultSection = document.querySelector('.anuncio-ganador');
-const eleccionPoderes = document.querySelector('.eleccion-poderes');
+const eleccionPoderes = document.querySelector('.eleccion-poderes'); //ELECCION JUG 1
+const eleccionJugador2 = document.querySelector(".eleccion-jugador2"); //ELECCION JUG 2
 
-//LO QUE QUITO DE PANTALLA PARA DAR AL GANADOR
+const resultSection = document.querySelector('.anuncio-ganador');  //GANADOR
 
-const header = document.querySelector("header");
-const titulo = document.querySelector(".titulo");
 
-function juego() {
-  const computerSelection = computerPick();
-  const playerSelection = gameForm.selection.value;
-  const ganadorInfo = jugar(playerSelection, computerSelection);  //AQUI CONECTA EL TIRO DE LA COMPU A LA VAR DEL JUEGO
+
+//ELEMENTOS PARA DESAPARECER
+const titulo1 = document.querySelector(".eleccion-jug1");
+const titulo2 = document.querySelector(".eleccion-jug2");  //TODAS LAS IMAGENES CUANDO TIRE EL JUG 2
+const titulos = document.querySelector(".titulos");
+
+
+//FUNCION PARA QUE EL JUG 2 ELIJA PERSONAJE
+function tiro1() {
+  displays();
+  const playerSelection1 = gameForm.selection.value;
+  return playerSelection1;
+}
+
+function displays() {
+  titulo1.style.display = "none";
+  eleccionPoderes.style.display = "none";
+
+  //APARECEN LAS OPCIONES PARA EL JUG 2
+  titulo2.style.display = "block";
+  eleccionJugador2.style.display = "flex";
+}
+
+
+function jugar() {
+  const jug1 = tiro1();
+  const playerSelection2 = gameForm2.selection.value;  //TIRO 2
+  const ganadorInfo = inicia(jug1, playerSelection2);  //AQUI SE GUARDAN AMBOS TIROS
   imprimeGanador(ganadorInfo);
 }
 
-function computerPick() {
-  const options = ['Hamehameha', 'Kienzan', 'BigBang'];
-  let computerSelection = Math.floor(Math.random() * 2.99);
-  computerSelection = options[computerSelection];
-  return computerSelection;
-}
 
-function jugar (player1, player2) {      //AQUI SE HACE LA LOGICA
+function inicia(player1, player2) {
   if(player1 === 'Hamehameha' && player2 === 'BigBang' ||
      player1 === 'BigBang' && player2 === 'Kienzan' ||
      player1 === 'Kienzan' && player2 === 'Hamehameha' ){
     return {
-      ganador: 'El Retador',
+      ganador: 'Jugador 1',
       player1Pick: player1,
       player2Pick: player2
     }
@@ -45,10 +63,10 @@ function jugar (player1, player2) {      //AQUI SE HACE LA LOGICA
             player1 === 'Kienzan' && player2 === 'BigBang' ||
             player1 === 'Hamehameha' && player2 === 'Kienzan'){
       return {
-        ganador: 'La Computadora',
+        ganador: 'Jugador 2',
         player1Pick: player1,
         player2Pick: player2
-      }
+    }
   } else {
     return {
       ganador: 'Empataron.',
@@ -59,12 +77,13 @@ function jugar (player1, player2) {      //AQUI SE HACE LA LOGICA
 }
 
 function imprimeGanador(ganadorInfo) {
+
   audioAtaques.pause();
   audioAtaques.currentTime = 0;
   audioAtaques.play();
-
-  titulo.style.display = "none";
-  eleccionPoderes.style.display = 'none';
+  
+  eleccionJugador2.style.display = 'none';
+  titulos.style.display = 'none';
   resultSection.style.display = 'block';
   regresa.style.display = 'block';
   ganador.innerText = 'El ganador de las esferas del dragon es: \n' + ganadorInfo.ganador;
@@ -74,6 +93,7 @@ function imprimeGanador(ganadorInfo) {
   player2Img.src = 'DragonBall/' + ganadorInfo.player2Pick + '.jpg';
 }
 
+//PARA MARCAR UN PODER
 for(let i = 0; i < labels.length; i++) {
   labels[i].addEventListener("click", function() {
 
@@ -81,11 +101,12 @@ for(let i = 0; i < labels.length; i++) {
     salto.currentTime = 0;
     salto.play();
 
+
     for(let k = 0; k < labels.length; k++) {
       labels[k].classList.remove("active");
     }
     labels[i].classList.add("active");
-  });
+  })
 }
 
 
