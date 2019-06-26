@@ -11,6 +11,7 @@
 body {
   background-color: orange;
   background-image: url("DragonBall/dragonfondo.jpg");
+
 }
 
 header {
@@ -25,9 +26,9 @@ header img {
 .titulo {
   text-align: center;
   font-family: dragon;
-  background-color: #4AC60F;
+  background-color: orange;
   border-radius: 20px;
-  color: yellow;
+  color: white;
   width: 70%;
   font-size: 40px;
   margin-left: auto;
@@ -79,9 +80,9 @@ header img {
 .personajes {
   text-align: center;
   font-family: dragon;
-  background-color: #4AC60F;
+  background-color: orange;
   border-radius: 20px;
-  color: yellow;
+  color: white;
   width: 70%;
   font-size: 40px;
   margin-left: auto;

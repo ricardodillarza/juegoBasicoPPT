@@ -48,9 +48,9 @@ header img {
 .titulo {
   text-align: center;
   font-family: dragon;
-  background-color: #4AC60F;
+  background-color: orange;
   border-radius: 20px;
-  color: yellow;
+  color: white;
   width: 70%;
   font-size: 50px;
   margin-left: auto;
@@ -62,9 +62,9 @@ header img {
 .eleccion-jug1 {
   text-align: center;
   font-family: dragon;
-  background-color: #4AC60F;
+  background-color: orange;
   border-radius: 20px;
-  color: yellow;
+  color: white;
   width: 70%;
   font-size: 50px;
   margin-left: auto;
@@ -171,7 +171,7 @@ h3 {
   margin-right: auto;
   font-family: dragon;
   font-size: 30px;
-  background-color: #4AC60F;
+  background-color: orange;
   border-radius: 20px;
   color: white;
   width: 70%;
@@ -215,9 +215,9 @@ h4 {
 .eleccion-jug2 {
   text-align: center;
   font-family: dragon;
-  background-color: #4AC60F;
+  background-color: orange;
   border-radius: 20px;
-  color: yellow;
+  color: white;
   width: 70%;
   font-size: 50px;
   margin-left: auto;
