@@ -85,7 +85,6 @@ function imprimeGanador(ganadorInfo) {
   eleccionJugador2.style.display = 'none';
   titulos.style.display = 'none';
   resultSection.style.display = 'block';
-  regresa.style.display = 'block';
   ganador.innerText = 'El ganador de las esferas del dragon es: \n' + ganadorInfo.ganador;
   player1Pick.innerText = ganadorInfo.player1Pick;
   player2Pick.innerText = ganadorInfo.player2Pick;
