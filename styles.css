@@ -38,7 +38,7 @@ header img {
   margin-left: 10px;
   cursor: pointer;
 
-  background: rgba(25, 166, 218, 0.48);
+  background-color:  rgba(25, 166, 218, 0.48);
   color: white;
   font-weight: bold;
 }
@@ -286,7 +286,7 @@ h4 {
   margin-left: 10px;
   cursor: pointer;
 
-  background: rgba(25, 166, 218, 0.48);
+  background-color: rgba(25, 166, 218, 0.48);
   color: white;
   font-weight: bold;
 }
