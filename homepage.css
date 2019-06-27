@@ -9,8 +9,9 @@
 }
 
 body {
-  background-color: orange;
-  background-image: url("DragonBall/dragonfondo.jpg");
+  background-color: black;
+  background-image: url("DragonBall/shenglong.jpg");
+  background-position: top;
 
 }
 
@@ -20,14 +21,14 @@ header {
 
 header img {
   width: 500px;
-  margin-bottom: 50px;
+  margin-bottom: 0px;
 }
 
 .titulo {
   text-align: center;
   font-family: dragon;
-  background-color: orange;
-  border-radius: 20px;
+  background-color: rgba(226, 139, 9, 0.67);
+  border-radius: 50px;
   color: white;
   width: 70%;
   font-size: 40px;
@@ -80,8 +81,8 @@ header img {
 .personajes {
   text-align: center;
   font-family: dragon;
-  background-color: orange;
-  border-radius: 20px;
+  background-color: rgba(226, 139, 9, 0.67);
+  border-radius: 50px;
   color: white;
   width: 70%;
   font-size: 40px;
