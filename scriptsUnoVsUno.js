@@ -42,7 +42,7 @@ function displays() {
 }
 
 
-function jugar() {
+function jugar() {   //TIRO DEL JUG 2
   const jug1 = tiro1();
   const playerSelection2 = gameForm2.selection.value;  //TIRO 2
   const ganadorInfo = inicia(jug1, playerSelection2);  //AQUI SE GUARDAN AMBOS TIROS
@@ -81,7 +81,7 @@ function imprimeGanador(ganadorInfo) {
   audioAtaques.pause();
   audioAtaques.currentTime = 0;
   audioAtaques.play();
-  
+
   eleccionJugador2.style.display = 'none';
   titulos.style.display = 'none';
   resultSection.style.display = 'block';
