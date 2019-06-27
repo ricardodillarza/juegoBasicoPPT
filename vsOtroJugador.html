@@ -8,10 +8,8 @@
   <body>
 
   <header>
-  <a title = "Inicio" href="https://ricardodillarza.github.io/juegoBasicoPPT/"><img src="DragonBall/logo.png" alt="logo"></a>
-  <div class="regresa">
-    <button onclick= "location.href = 'https://ricardodillarza.github.io/juegoBasicoPPT/vsOtroJugador.html">Regresa</button>
-  </div>
+    <a title = "Inicio" href="https://ricardodillarza.github.io/juegoBasicoPPT/"><img src="DragonBall/logo.png" alt="logo"></a>
+    <button class="regresa" onclick= "location.href = 'https://ricardodillarza.github.io/juegoBasicoPPT/vsOtroJugador.html'">Jugar de nuevo</button>
   </header>
 
     <article class="titulos">
@@ -41,7 +39,7 @@
       <input id="bigbang-input" name="selection" type="radio" value="BigBang">
 
     </form>
-      <button class="ok" onClick="tiro1()">OK</button>
+      <button class="ok" onclick="tiro1()">OK</button>
 
   </section>
 
@@ -49,26 +47,26 @@
   <section class="eleccion-jugador2">     <!-- AQUI VAN LAS OPCIONES DE ATAQUES JUG 2 -->
 
     <form id="game-form2">
-      <label class="poder" for = "hame-input">
+      <label class="poder" for = "hame-input2">
         <img src="DragonBall/Hamehameha.jpg" alt="hamehameha">
         <h3>Hamehameha</h3>
       </label>
-      <input id="hame-input" name="selection" type="radio" value="Hamehameha">
+      <input id="hame-input2" name="selection" type="radio" value="Hamehameha">
 
-      <label class="poder" for="kienzan-input">
+      <label class="poder" for="kienzan-input2">
         <img src="DragonBall/Kienzan.jpg" alt="kienzan">
         <h3>Kienzan</h3>
       </label>
-      <input id="kienzan-input" name="selection" type="radio" value="Kienzaan">
+      <input id="kienzan-input2" name="selection" type="radio" value="Kienzan">
 
-      <label class="poder" for="bigbang-input">
+      <label class="poder" for="bigbang-input2">
         <img src="DragonBall/BigBang.jpg" alt="bigbang">
         <h3>Big Bang Attack</h3>
       </label>
-      <input id="bigbang-input" name="selection" type="radio" value="BigBang">
+      <input id="bigbang-input2" name="selection" type="radio" value="BigBang">
 
     </form>
-    <button class="final" onClick="jugar()">¡A pelear!</button>  <!-- ESTE APARECE CUANDO EL JUG2 ESCOGIO PODER -->
+    <button class="final" onclick="jugar()">¡A pelear!</button>  <!-- ESTE APARECE CUANDO EL JUG2 ESCOGIO PODER -->
   </section>
 
   <section class="anuncio-ganador">

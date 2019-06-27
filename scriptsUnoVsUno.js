@@ -1,3 +1,9 @@
+//SECTIONS
+const eleccionPoderes = document.querySelector('.eleccion-poderes'); //ELECCION JUG 1
+const eleccionJugador2 = document.querySelector(".eleccion-jugador2"); //ELECCION JUG 2
+
+const resultSection = document.querySelector('.anuncio-ganador');  //GANADOR
+
 const gameForm = document.querySelector('#game-form');
 const gameForm2 = document.querySelector('#game-form2');  //JUG 2
 const labels = document.querySelectorAll(".poder");
@@ -10,16 +16,11 @@ const player2Pick = document.querySelector('.player2-pick');
 const player1Img = document.querySelector('.player1-img');
 const player2Img = document.querySelector('.player2-img');
 
+// AUDIOS
+const audioAtaques = document.querySelector('.audios');
+const salto = document.querySelector('.salto');
 
-//SECTIONS
-const eleccionPoderes = document.querySelector('.eleccion-poderes'); //ELECCION JUG 1
-const eleccionJugador2 = document.querySelector(".eleccion-jugador2"); //ELECCION JUG 2
-
-const resultSection = document.querySelector('.anuncio-ganador');  //GANADOR
-
-
-
-//ELEMENTOS PARA DESAPARECER
+//ELEMENTOS PARA DESAPARECER Y APARECER
 const titulo1 = document.querySelector(".eleccion-jug1");
 const titulo2 = document.querySelector(".eleccion-jug2");  //TODAS LAS IMAGENES CUANDO TIRE EL JUG 2
 const titulos = document.querySelector(".titulos");
@@ -28,8 +29,6 @@ const titulos = document.querySelector(".titulos");
 //FUNCION PARA QUE EL JUG 2 ELIJA PERSONAJE
 function tiro1() {
   displays();
-  const playerSelection1 = gameForm.selection.value;
-  return playerSelection1;
 }
 
 function displays() {
@@ -41,15 +40,17 @@ function displays() {
   eleccionJugador2.style.display = "flex";
 }
 
-
-function jugar() {   //TIRO DEL JUG 2
-  const jug1 = tiro1();
+ //OBTENER VALORES DE AMBOS JUGADORES
+function jugar() {
+  const playerSelection1 = gameForm.selection.value;  //TIRO 1
   const playerSelection2 = gameForm2.selection.value;  //TIRO 2
-  const ganadorInfo = inicia(jug1, playerSelection2);  //AQUI SE GUARDAN AMBOS TIROS
+
+  const ganadorInfo = inicia(playerSelection1, playerSelection2);  //AQUI SE GUARDAN AMBOS TIROS
+
   imprimeGanador(ganadorInfo);
 }
 
-
+//COMPARACION DEL JUGADOR GANADOR
 function inicia(player1, player2) {
   if(player1 === 'Hamehameha' && player2 === 'BigBang' ||
      player1 === 'BigBang' && player2 === 'Kienzan' ||
@@ -69,7 +70,7 @@ function inicia(player1, player2) {
     }
   } else {
     return {
-      ganador: 'Empataron.',
+      ganador: 'Empate',
       player1Pick: player1,
       player2Pick: player2
     }
@@ -90,6 +91,7 @@ function imprimeGanador(ganadorInfo) {
   player2Pick.innerText = ganadorInfo.player2Pick;
   player1Img.src = 'DragonBall/' + ganadorInfo.player1Pick + '.jpg';
   player2Img.src = 'DragonBall/' + ganadorInfo.player2Pick + '.jpg';
+  regresa.style.display = "block";
 }
 
 //PARA MARCAR UN PODER
@@ -100,15 +102,9 @@ for(let i = 0; i < labels.length; i++) {
     salto.currentTime = 0;
     salto.play();
 
-
     for(let k = 0; k < labels.length; k++) {
       labels[k].classList.remove("active");
     }
     labels[i].classList.add("active");
   })
 }
-
-
-// AUDIOS
-const audioAtaques = document.querySelector('.audios');
-const salto = document.querySelector('.salto');

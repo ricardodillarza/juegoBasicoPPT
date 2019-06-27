@@ -179,7 +179,7 @@ h3 {
 
 .vencedor {
   width: 300px;
-  margin-bottom: 50px;
+  margin-bottom: 0px;
 }
 
 .player1-img,
@@ -277,21 +277,19 @@ h4 {
 }
 
 .regresa {
-  text-align: left;
+  text-align: center;
   vertical-align: top;
-  width: 50px;
+  width: 80px;
   display: none;
-}
 
-.regresa button {
   padding: 15px 20px;
   font-size: 10px;
-  border-radius: 7px;
+  border-radius: 400px;
   color: white;
   margin-left: 10px;
   cursor: pointer;
 
-  background: red;
+  background: rgb(26, 173, 8);
   color: white;
   font-weight: bold;
 }
